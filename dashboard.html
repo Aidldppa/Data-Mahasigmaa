@@ -1,0 +1,46 @@
+<!-- dashboard.html -->
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Dashboard — Admin</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-row">
+      <a href="index.html" class="back">←</a>
+      <h1>Dashboard Admin</h1>
+      <div style="display:flex;gap:8px">
+        <button class="btn ghost" id="btnLogout">Logout</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="card">
+      <div class="space-between" style="margin-bottom:10px">
+        <div>
+          <input id="searchAdmin" placeholder="Cari nama / hp / layanan" style="padding:8px;border-radius:8px;border:1px solid #eee">
+        </div>
+        <div style="display:flex;gap:8px">
+          <button class="btn ghost" id="btnExport">Export JSON</button>
+          <button class="btn ghost" id="btnRefresh">Refresh</button>
+        </div>
+      </div>
+
+      <div style="overflow:auto">
+        <table class="table">
+          <thead>
+            <tr><th>Waktu</th><th>Nama</th><th>HP</th><th>Layanan</th><th>Jumlah</th><th>Harga</th><th>Status</th><th>Aksi</th></tr>
+          </thead>
+          <tbody id="orderTable"></tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+
+  <script type="module" src="js/dashboard.js"></script>
+</body>
+</html>

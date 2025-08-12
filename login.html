@@ -1,0 +1,44 @@
+<!-- login.html -->
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Login Admin</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+   <div class="wave-overlay">
+    <svg class="wave-svg" viewBox="0 0 1440 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path class="wave-path1" d="M0 80 Q 360 120 720 80 T 1440 80 V120 H0Z" fill="#ff99c8"/>
+      <path class="wave-path2" d="M0 100 Q 360 60 720 100 T 1440 100 V120 H0Z" fill="#ff4f8b" fill-opacity=".7"/>
+    </svg>
+  </div>
+  <main class="container">
+    <section class="card login-card">
+      <div class="login-hero minimal-center">
+        <div class="login-illustration">
+          <svg width="60" height="60" viewBox="0 0 60 60" fill="none"><circle cx="30" cy="30" r="30" fill="#ff99c8"/><text x="50%" y="54%" text-anchor="middle" font-size="2.2rem" font-family="Poppins,Arial" fill="#fff">🔑</text></svg>
+        </div>
+      </div>
+      <h2 class="minimal-center" style="margin-bottom:2px">Login</h2>
+      <div class="muted minimal-center" style="margin-bottom:16px">Masuk ke akun Joki Tugas</div>
+      <form id="loginForm" autocomplete="off" class="login-form minimal-form">
+        <label for="loginRole">Masuk sebagai</label>
+        <select id="loginRole" required class="minimal-input">
+          <option value="customer">Customer</option>
+          <option value="admin">Admin</option>
+        </select>
+        <div id="loginFields" class="login-fields-area">
+          <!-- Akan diisi JS sesuai role -->
+        </div>
+        <button type="submit" class="btn login-btn minimal-btn">Login</button>
+      </form>
+      <div id="loginMsg" class="note"></div>
+      <div class="small-muted" style="margin-top:10px;text-align:center">Belum punya akun? <a href="register.html">Buat Akun</a></div>
+    </section>
+  </main>
+
+  <script type="module" src="js/login.js"></script>
+</body>
+</html>

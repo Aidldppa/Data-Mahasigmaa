@@ -1,0 +1,74 @@
+<!-- order.html -->
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Pesan — Joki Tugas</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-row">
+      <a href="index.html" class="back">←</a>
+      <h1>Form Pemesanan</h1>
+      <a class="btn small" href="menu.html">Harga</a>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="card">
+      <form id="orderForm">
+        <label>Nama Lengkap</label>
+        <input id="nama" type="text" required>
+
+        <label>No. HP (08...)</label>
+        <input id="hp" type="tel" required pattern="08[0-9]{8,12}">
+
+        <label>Layanan</label>
+        <select id="layanan" required>
+          <option value="">-- Pilih Layanan --</option>
+          <option>Makalah</option>
+          <option>Essay</option>
+          <option>PowerPoint</option>
+          <option>Desain Poster</option>
+          <option>lainnya</option>
+        </select>
+
+    <label>Jumlah Halaman / Tugas</label>
+    <input id="halaman" type="number" min="1" value="1" required>
+
+          <div style="flex:1">
+            <label>Prioritas</label>
+            <select id="prioritas">
+              <option value="express">Express (1-6 jam)</option>
+              <option value="reguler" selected>Reguler (24-72 jam)</option>
+              <option value="ekonomis">Ekonomis (3-7 hari)</option>
+            </select>
+          </div>
+        </div>
+
+        <label>Deadline (tanggal / jam)</label>
+        <input id="deadline" type="datetime-local">
+
+        <label>Instruksi / Referensi</label>
+        <textarea id="catatan" placeholder="Link Drive / referensi / catatan.."></textarea>
+
+        <div class="space-between" style="margin-top:10px;align-items:center">
+          <div>
+            <div class="small-muted">Estimasi Harga</div>
+            <div class="price" id="estPrice">Rp 0</div>
+          </div>
+          <div style="display:flex;gap:8px">
+            <button type="button" class="btn ghost" id="btnReset">Reset</button>
+            <button type="submit" class="btn">Kirim Pesanan</button>
+          </div>
+        </div>
+        <div id="formMsg" class="note"></div>
+      </form>
+    </section>
+  </main>
+
+  <script type="module" src="js/order.js"></script>
+</body>
+</html>

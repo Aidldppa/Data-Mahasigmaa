@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Buat Akun — Joki Tugas</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="site-header pink-bg">
+    <div class="container header-row">
+      <div class="brand">
+        <div class="logo">JT</div>
+        <div class="brand-text">
+          <h1>Joki Tugas</h1>
+        </div>
+    </div>
+  </header>
+  <main class="container">
+    <section class="card register-card">
+      <div class="register-hero">
+        <div class="register-illustration">
+          <svg width="60" height="60" viewBox="0 0 60 60" fill="none"><circle cx="30" cy="30" r="30" fill="#ff99c8"/><text x="50%" y="54%" text-anchor="middle" font-size="2.2rem" font-family="Poppins,Arial" fill="#fff">👤</text></svg>
+        </div>
+        <div>
+          <h2 style="margin-bottom:2px">Buat Akun</h2>
+          <div class="muted">Daftar untuk akses layanan Joki Tugas</div>
+        </div>
+      </div>
+      <form id="registerForm" autocomplete="off" class="register-form">
+        <label>Nama Lengkap</label>
+        <input id="regNama" type="text" required placeholder="Nama lengkap">
+        <label>Email</label>
+        <input id="regEmail" type="email" required placeholder="email@domain.com">
+        <label>No. HP</label>
+        <input id="regHP" type="tel" required pattern="08[0-9]{8,12}" placeholder="08xxxxxxxxxx">
+        <label>Password</label>
+        <input id="regPassword" type="password" required minlength="6" placeholder="Minimal 6 karakter">
+        <button type="submit" class="btn register-btn">Buat Akun</button>
+      </form>
+      <div id="registerMsg" class="note"></div>
+      <div class="small-muted" style="margin-top:10px;text-align:center">Sudah punya akun? <a href="login.html">Login</a></div>
+    </section>
+  </main>
+  <script type="module" src="js/navbar.js"></script>
+  <script type="module" src="js/register.js"></script>
+</body>
+</html>
